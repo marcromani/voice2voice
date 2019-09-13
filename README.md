@@ -16,7 +16,7 @@ During training both the source image and the distance matrix are fed to the gen
 Once the system is trained, to convert an audio sample from the source speaker voice to the target speaker voice, the generator is fed the source image and the zero matrix as distance matrix.
 
 ### Details
-The architecture and training hyperparameters are the same as in the original paper, but we replaced the batch normalization layers by instance normalization layers both in the generator and the discriminator, as suggested in [here](https://arxiv.org/abs/1607.08022).
+The architecture and training hyperparameters are the same as in the original paper, but we replaced the batch normalization layers by instance normalization layers both in the generator and the discriminator, as suggested [here](https://arxiv.org/abs/1607.08022).
 
 ## Dependencies
 * `librosa`
