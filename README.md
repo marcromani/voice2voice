@@ -19,6 +19,6 @@ Once the system is trained, to convert an audio sample from the source speaker v
 The architecture and training hyperparameters are the same as in the original paper, but we replaced the batch normalization layers by instance normalization layers both in the generator and the discriminator, as suggested [here](https://arxiv.org/abs/1607.08022).
 
 ## Dependencies
-* `librosa`
-* `numpy`
-* `torch`
+* [`librosa`](https://librosa.github.io/librosa/index.html#)
+* [`numpy`](https://numpy.org/)
+* [`torch`](https://pytorch.org/)
