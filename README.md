@@ -35,5 +35,3 @@ Source | Target | Fake
 [![](https://github.com/marcromani/voice2voice/blob/master/outputs/source_3.png "source")](https://raw.githubusercontent.com/marcromani/voice2voice/master/outputs/source_3.wav) | [![](https://github.com/marcromani/voice2voice/blob/master/outputs/target_3.png "target")](https://raw.githubusercontent.com/marcromani/voice2voice/master/outputs/target_3.wav) | [![](https://github.com/marcromani/voice2voice/blob/master/outputs/fake_3.png "fake")](https://raw.githubusercontent.com/marcromani/voice2voice/master/outputs/fake_3.wav)
 :-:|:-:|:-:
 Source | Target | Fake
-
-<audio src="https://raw.githubusercontent.com/marcromani/voice2voice/master/outputs/fake_1.wav" controls preload></audio>
