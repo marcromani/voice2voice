@@ -9,7 +9,7 @@ Non-conditional GAN system (neither the generator nor the discriminator are cond
 ## Data
 We trained and tested the system with the [Voice Conversion Challenge 2018](https://datashare.is.ed.ac.uk/handle/10283/3061) data. For a *(source, target)* pair of audio samples (from two different people uttering the same speech) we compute their Mel [spectograms](https://en.wikipedia.org/wiki/Spectrogram) so that each one of them is a single-channel *256x256* image. These are the inputs of both the generator and the discriminator.
 
-[![](https://github.com/marcromani/voice2voice/blob/master/outputs/source_5.png "source")](https://github.com/marcromani/voice2voice/blob/master/outputs/source_5.wav) | [![](https://github.com/marcromani/voice2voice/blob/master/outputs/target_5.png "target")](https://github.com/marcromani/voice2voice/blob/master/outputs/source_5.wav)
+[![](https://github.com/marcromani/voice2voice/blob/master/outputs/source_5.png "source")](https://raw.githubusercontent.com/marcromani/voice2voice/master/outputs/source_5.wav) | [![](https://github.com/marcromani/voice2voice/blob/master/outputs/target_5.png "target")](https://raw.githubusercontent.com/marcromani/voice2voice/master/outputs/target_5.wav)
 :-:|:-:
 Source | Target
 
@@ -24,14 +24,14 @@ The architecture and training hyperparameters are the same as in the original pa
 * [`torch`](https://pytorch.org/)
 
 ## Examples
-[![](https://github.com/marcromani/voice2voice/blob/master/outputs/source_1.png "source")](https://github.com/marcromani/voice2voice/blob/master/outputs/source_1.wav) | [![](https://github.com/marcromani/voice2voice/blob/master/outputs/target_1.png "target")](https://github.com/marcromani/voice2voice/blob/master/outputs/target_1.wav) | [![](https://github.com/marcromani/voice2voice/blob/master/outputs/fake_1.png "fake")](https://github.com/marcromani/voice2voice/blob/master/outputs/fake_1.wav)
+[![](https://github.com/marcromani/voice2voice/blob/master/outputs/source_1.png "source")](https://raw.githubusercontent.com/marcromani/voice2voice/master/outputs/source_1.wav) | [![](https://github.com/marcromani/voice2voice/blob/master/outputs/target_1.png "target")](https://raw.githubusercontent.com/marcromani/voice2voice/master/outputs/target_1.wav) | [![](https://github.com/marcromani/voice2voice/blob/master/outputs/fake_1.png "fake")](https://raw.githubusercontent.com/marcromani/voice2voice/master/outputs/fake_1.wav)
 :-:|:-:|:-:
 Source | Target | Fake
 
-[![](https://github.com/marcromani/voice2voice/blob/master/outputs/source_2.png "source")](https://github.com/marcromani/voice2voice/blob/master/outputs/source_2.wav) | [![](https://github.com/marcromani/voice2voice/blob/master/outputs/target_2.png "target")](https://github.com/marcromani/voice2voice/blob/master/outputs/target_2.wav) | [![](https://github.com/marcromani/voice2voice/blob/master/outputs/fake_2.png "fake")](https://github.com/marcromani/voice2voice/blob/master/outputs/fake_2.wav)
+[![](https://github.com/marcromani/voice2voice/blob/master/outputs/source_2.png "source")](https://raw.githubusercontent.com/marcromani/voice2voice/master/outputs/source_2.wav) | [![](https://github.com/marcromani/voice2voice/blob/master/outputs/target_2.png "target")](https://raw.githubusercontent.com/marcromani/voice2voice/master/outputs/target_2.wav) | [![](https://github.com/marcromani/voice2voice/blob/master/outputs/fake_2.png "fake")](https://raw.githubusercontent.com/marcromani/voice2voice/master/outputs/fake_2.wav)
 :-:|:-:|:-:
 Source | Target | Fake
 
-[![](https://github.com/marcromani/voice2voice/blob/master/outputs/source_3.png "source")](https://github.com/marcromani/voice2voice/blob/master/outputs/source_3.wav) | [![](https://github.com/marcromani/voice2voice/blob/master/outputs/target_3.png "target")](https://github.com/marcromani/voice2voice/blob/master/outputs/target_3.wav) | [![](https://github.com/marcromani/voice2voice/blob/master/outputs/fake_3.png "fake")](https://github.com/marcromani/voice2voice/blob/master/outputs/fake_3.wav)
+[![](https://github.com/marcromani/voice2voice/blob/master/outputs/source_3.png "source")](https://raw.githubusercontent.com/marcromani/voice2voice/master/outputs/source_3.wav) | [![](https://github.com/marcromani/voice2voice/blob/master/outputs/target_3.png "target")](https://raw.githubusercontent.com/marcromani/voice2voice/master/outputs/target_3.wav) | [![](https://github.com/marcromani/voice2voice/blob/master/outputs/fake_3.png "fake")](https://raw.githubusercontent.com/marcromani/voice2voice/master/outputs/fake_3.wav)
 :-:|:-:|:-:
 Source | Target | Fake
