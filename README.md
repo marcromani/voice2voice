@@ -1,22 +1,16 @@
 # voice2voice
-Parallel data voice conversion based on [pix2pix](https://phillipi.github.io/pix2pix/).
+Parallel data voice conversion based on the [pix2pix](https://phillipi.github.io/pix2pix/) architecture.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/marcromani/voice2voice/blob/master/LICENSE)
 
-## Summary and contributions
-It is a straightforward application of the [pix2pix](https://phillipi.github.io/pix2pix/) architecture with some minor changes.
+## Summary
+Non-conditional GAN system (neither the generator nor the discriminator are conditioned) based on the [pix2pix](https://phillipi.github.io/pix2pix/) architecture. The aim is to reconstruct the speech of a source speaker with the voice of a target speaker. The models are not conditioned because it is not possible to learn a meaningful mapping given the (non-linear) audio misalignments due to, for example, source and target speakers speaking at different speeds.
 
-### Data transformation
-For a *(source, target)* pair of audio samples (from two different people uttering the same speech) we compute their Mel [spectograms](https://en.wikipedia.org/wiki/Spectrogram) so that each one of them is a single-channel *256x256* image. We also compute the *256x256* [DTW](https://en.wikipedia.org/wiki/Dynamic_time_warping) matrix between such samples to tackle the problem of parallel data misalignment.
-
-### Training
-During training both the source image and the distance matrix are fed to the generator as a *2x256x256* tensor, which tries to output an image that resembles the target. The distance matrix is relevant here because it provides the U-Net a way to handle non-affine temporal misalignments between source and target. In essence, the generator is conditioned twice. To our knowledge this is a novel approach. The discriminator is standard, it only sees real and fake images.
-
-### Evaluating
-Once the system is trained, to convert an audio sample from the source speaker voice to the target speaker voice, the generator is fed the source image and the zero matrix as distance matrix.
+### Data
+We trained and tested the system with the [Voice Conversion Challenge 2018](https://datashare.is.ed.ac.uk/handle/10283/3061) data. For a *(source, target)* pair of audio samples (from two different people uttering the same speech) we compute their Mel [spectograms](https://en.wikipedia.org/wiki/Spectrogram) so that each one of them is a single-channel *256x256* image. These are the inputs of both the generator and the discriminator.
 
 ### Details
-The architecture and training hyperparameters are the same as in the original paper, but we replaced the batch normalization layers by instance normalization layers both in the generator and the discriminator, as suggested [here](https://arxiv.org/abs/1607.08022).
+The architecture and training hyperparameters are the same as in the original paper, but we replaced the batch normalization layers by instance normalization layers both in the generator and the discriminator, as suggested [here](https://arxiv.org/abs/1607.08022). Also, we use mean squared error as the adversarial loss, as suggested [here](https://arxiv.org/abs/1611.04076).
 
 ## Dependencies
 * [`librosa`](https://librosa.github.io/librosa/index.html#)
